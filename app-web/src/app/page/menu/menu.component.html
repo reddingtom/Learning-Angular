@@ -1,0 +1,14 @@
+<div class="container mt-4 mb-4">
+    <h1 class="text-center">Nosso Menu</h1>
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let fd of foodData">
+            <div class="foodbox">
+                <img src="{{fd.foodImg}}">
+                <h1>{{fd.foodName}}</h1>
+                <p>{{fd.foodDetails}}</p>
+                <p>{{fd.foodPreco | currency:'BRL'}}</p>
+            </div>
+        </div>
+    </div>
+    <a routerLink="menu" class="maisopcao"> + Opções</a>
+</div>

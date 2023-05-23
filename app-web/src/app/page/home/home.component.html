@@ -1,0 +1,42 @@
+<div class="banner">
+    <div class="content">
+        <h1 class="mb-5">Meu App <br> Dê seu LIKE </h1>
+        <a routerLink="menu">Fazer Pedidos <i class="bi bi-arrow-right"></i></a>
+    </div>
+</div>
+<div class="container mt-2 mb-2">
+    <h1 class="text-center">Como fazer os pedidos</h1>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="box">
+                <h1>1</h1>
+                <p>Selecione o tipo</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="box">
+                <h1>2</h1>
+                <p>Preencher os detalhes</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="box">
+                <h1>3</h1>
+                <p>Entrega de seus pedidos em minutos</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-4 mb-4">
+    <h1 class="text-center">Nosso Cardapio</h1>
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let fd of foodData.slice(0,4)">
+            <div class="foodbox">
+                <img src="{{fd.foodImg}}">
+                <h1>{{fd.foodName}}</h1>
+                <p>{{fd.foodPreco | currency:'BRL'}}</p>
+            </div>
+        </div>
+    </div>
+    <a routerLink="menu" class="maisopcao"> + Opções</a>
+</div>
